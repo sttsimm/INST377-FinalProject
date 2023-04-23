@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello World!</title>
+    <title>Shabbat Start Times</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Shabbat Candle Lighting Times</h1>
+    <p>Enter your ZIP code to get the Shabbat candle lighting times for the current week:</p>
+    <form>
+      <label for="zip">ZIP code:</label>
+      <input type="text" id="zip" name="zip">
+      <button type="button" onclick="getLightingTimes()">Get Shabbat Start Time For The Current Week</button>
+    </form>
+    <div id="results"></div>
+    <script src="script.js"></script>
   </body>
 </html>
