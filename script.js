@@ -14,6 +14,16 @@ function getLightingTimes() {
               return item.category === "candles";
             });
 
+
+      //pass Times var to this function
+        displayLightingTimes(Times);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+
+    }
+
             //results div
             var results = document.getElementById("results");
       
@@ -31,4 +41,4 @@ function getLightingTimes() {
           .catch(function(error) {
             console.error(error);
           });
-      }
+      
