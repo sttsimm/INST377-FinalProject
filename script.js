@@ -14,6 +14,9 @@ function getLightingTimes() {
               return item.category === "candles";
             });
 
+           // store times data into localStorage
+           localStorage.setItem("lightingTimes", JSON.stringify(Times));
+
 
       //pass Times var to this function
         displayLightingTimes(Times);
