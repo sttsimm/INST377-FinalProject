@@ -18,9 +18,9 @@ function getLightingTimes() {
            localStorage.setItem("lightingTimes", JSON.stringify(Times));
 
 
-      //pass Times var to this function
-        displayLightingTimes(Times);
-      })
+           //pass Times var to this function
+           displayLightingTimes(Times);
+         })
       .catch(function (error) {
         console.error(error);
       });
@@ -43,6 +43,12 @@ function getLightingTimes() {
     });
 
     }
+
+  // load data from localStorage if available
+  if (localStorage.getItem("lightingTimes")) {
+    var Times = JSON.parse(localStorage.getItem("lightingTimes"));
+    displayLightingTimes(Times);
+  }
 
   // Adding event listener to button, once button is clicked the getLightingTimes function is called
   document.getElementById("get-times").addEventListener("click", function () {
