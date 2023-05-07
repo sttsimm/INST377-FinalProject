@@ -24,6 +24,23 @@ function getLightingTimes() {
 
     }
 
+    function displayLightingTimes(Times) {
+      //results div
+    var results = document.getElementById("results");
+  
+    // Clear prev results from div
+    results.innerHTML = "";
+  
+    // loop through start times, add to results div
+    Times.forEach(function (time) {
+      var date = new Date(time.date);
+      var formatDate = date.toLocaleDateString();
+      var formatTime = time.title;
+      results.innerHTML += "<p>" + formatDate + ": " + formatTime + "</p>";
+    });
+
+    }
+
             //results div
             var results = document.getElementById("results");
       
