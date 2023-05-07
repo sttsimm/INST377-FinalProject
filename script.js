@@ -60,5 +60,11 @@ function getLightingTimes() {
     event.preventDefault();
     });
 
+    // event listener for refreshing button
+    document.getElementById("refresh-btn").addEventListener("click", function() {
+      localStorage.removeItem("lightingTimes");
+      getLightingTimes();
+    });
+
          
       
