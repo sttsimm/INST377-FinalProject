@@ -49,7 +49,7 @@ function getLightingTimes() {
   // Adding event listener to form to prevent default behavior on submit
   document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault();
-  });
+    });
 
          
       
