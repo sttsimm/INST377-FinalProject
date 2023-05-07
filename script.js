@@ -41,5 +41,10 @@ function getLightingTimes() {
 
     }
 
+  // Adding event listener to button, once button is clicked the getLightingTimes function is called
+  document.getElementById("get-times").addEventListener("click", function () {
+    getLightingTimes();
+  });
+
          
       
