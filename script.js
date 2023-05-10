@@ -39,10 +39,6 @@ function getLightingTimes() {
               weatherSection.innerHTML += "<p>Low: " + weather.low_temp + "°F</p>";
               weatherSection.innerHTML += "<p>Chance of precipitation: " + weather.pop + "%</p>";
 
-
-
-
-
             })
             .catch(function(error) {
               console.error(error);
