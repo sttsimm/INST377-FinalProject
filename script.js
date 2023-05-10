@@ -20,6 +20,10 @@ function getLightingTimes() {
 
            //pass Times var to this function
            displayLightingTimes(Times);
+           var weatherUrl = "https://api.weatherbit.io/v2.0/forecast/daily?postal_code=" + zipCode + "&key=2bf6e17633fe42f6a7261fc42e85a75a&days=8&units=I";
+
+
+
          })
       .catch(function (error) {
         console.error(error);
