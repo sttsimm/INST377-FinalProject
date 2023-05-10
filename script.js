@@ -31,16 +31,29 @@ function getLightingTimes() {
             var weather = data.data.filter(function(day) {
               return new Date(day.valid_date).getDay() === 6;
             })[0];
+                // Display weather data for following Saturday
+              var weatherSection = document.getElementById("weather");
+              weatherSection.innerHTML = "";
+              weatherSection.innerHTML += "<p><b>Weather for following Saturday:</b></p>";
+              weatherSection.innerHTML += "<p>High: " + weather.high_temp + "°F</p>"; //changed c to f
+              weatherSection.innerHTML += "<p>Low: " + weather.low_temp + "°F</p>";
+              weatherSection.innerHTML += "<p>Chance of precipitation: " + weather.pop + "%</p>";
 
 
 
 
-         })
-      .catch(function (error) {
-        console.error(error);
-      });
 
-    }
+            })
+            .catch(function(error) {
+              console.error(error);
+            });
+          })
+          .catch(function(error) {
+            console.error(error);
+          });
+        }
+
+    
 
     function displayLightingTimes(Times) {
       //results div
