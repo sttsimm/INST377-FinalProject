@@ -7,17 +7,13 @@ function mainEvent() {
         .then(function(response) {
           return response.json();
         })
-
         .then(function(data) {
             // Filtering response data to extract Shabbat start times
             var Times = data.items.filter(function(item) {
               return item.category === "candles";
             });
-
            // store times data into localStorage
            localStorage.setItem("lightingTimes", JSON.stringify(Times));
-
-
            //pass Times var to this function
            displayLightingTimes(Times);
            var weatherUrl = "https://api.weatherbit.io/v2.0/forecast/daily?postal_code=" + zipCode + "&key=2bf6e17633fe42f6a7261fc42e85a75a&days=8&units=I";
