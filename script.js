@@ -1,4 +1,4 @@
-function getLightingTimes() {
+function mainEvent() {
     // store ZIP code and API parameters
     var zipCode = document.getElementById("zip").value;
     var url = "https://www.hebcal.com/shabbat?cfg=json&zip=" + zipCode + "&M=on";
@@ -76,7 +76,7 @@ function getLightingTimes() {
 
   // Adding event listener to button, once button is clicked the getLightingTimes function is called
   document.getElementById("get-times").addEventListener("click", function () {
-    getLightingTimes();
+    mainEvent();
   });
 
   // Adding event listener to form to prevent default behavior on submit
@@ -87,7 +87,7 @@ function getLightingTimes() {
     // event listener for refreshing button
     document.getElementById("refresh-btn").addEventListener("click", function() {
       localStorage.removeItem("lightingTimes");
-      getLightingTimes();
+      mainEvent();
     });
 
          
