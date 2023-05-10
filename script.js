@@ -26,6 +26,11 @@ function getLightingTimes() {
            .then(function(response) {
              return response.json();
            })
+           .then(function(data) {
+            // Filter response data to get weather for following Saturday
+            var weather = data.data.filter(function(day) {
+              return new Date(day.valid_date).getDay() === 6;
+            })[0];
 
 
 
